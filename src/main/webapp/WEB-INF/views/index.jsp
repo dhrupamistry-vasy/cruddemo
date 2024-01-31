@@ -13,107 +13,108 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <!-- Custom CSS -->
 <style>
-    body {
-        background-image: url('https://www.dcsglobalinfo.com/img/slides/hrms2.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-color: #f8f9fa; /* Fallback color if the image is not loaded */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+body {
+    background-color: white;
+    background-image: url('https://e0.pxfuel.com/wallpapers/1017/254/desktop-wallpaper-what-makes-a-human-resource-management-system-unique-human-resources.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .container {
-        margin-top: 50px;
-    }
 
-    h2 {
-        color: #007bff;
-    }
+.container {
+	margin-top: 50px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+}
 
-    hr {
-        border-top: 2px solid #007bff;
-        margin: 20px 0;
-    }
+h2 {
+	color: #007bff;
+}
 
-    table {
-        width: 100%;
-        margin-bottom: 20px;
-        background-color: #333;
-        color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+hr {
+	border-top: 2px solid #007bff;
+	margin: 20px 0;
+}
 
-    th, td {
-        text-align: center;
-        padding: 12px;
-        color:white;
-    }
+table {
+	width: 100%;
+	margin-bottom: 20px;
+	background-color: white; /* Set background color to white */
+	color: black;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .btn {
-        margin-right: 5px;
-    }
+th, td {
+	text-align: center;
+	padding: 12px;
+}
 
-    .form-group {
-        margin-bottom: 20px;
-    }
+tbody tr {
+	background-color: white;
+	/* Set background color of every row to white */
+}
 
-    form {
-        background-color: black;
-        color: white;
-        padding: 20px;
-        border: 1px solid #ced4da;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+.btn {
+	margin-right: 5px;
+}
 
-    .btn-info, .btn-warning, .btn-danger {
-        padding: 10px 20px;
-    }
+.form-group {
+	margin-bottom: 20px;
+}
 
-    .btn-success {
-        padding: 10px 20px;
-        background-color: #28a745;
-        border-color: #28a745;
-    }
+form {
+	background-color: white;
+	color: black;
+	padding: 20px;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    h3 {
-        color: #007bff;
-    }
+.btn-info, .btn-warning, .btn-danger, .btn-success {
+	padding: 10px 20px;
+	border-radius: 5px;
+}
 
-    table thead th {
-        background-color: #007bff;
-        color: white;
-    }
+h3 {
+	color: #007bff;
+}
 
- 
+table thead th {
+	background-color: white;
+	color: white;
+}
 
-    @media (max-width: 768px) {
-        h2 {
-            font-size: 24px;
-        }
-        .btn {
-            margin-top: 5px;
-        }
-    }
+@media ( max-width : 768px) {
+	h2 {
+		font-size: 24px;
+	}
+	.btn {
+		margin-top: 5px;
+	}
+}
 </style>
-
 </head>
 <body>
 	<div class="container">
-<h2 class="text-center" style="color: white; background-color: black;">Employee Management System</h2>
+		<h2 class="text-center text-primary mb-4">Employee Management
+			System</h2>
 		<hr>
 
 		<div class="row">
 			<div class="col-md-12">
 				<h3 class="mb-3">Employee List</h3>
-				<table class="table">
+				<table class="table table-bordered table-striped">
 					<thead class="thead-light">
 						<tr>
 							<th>ID</th>
 							<th>First Name</th>
 							<th>Last Name</th>
 							<th>Email</th>
+							<th>Phone No</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
@@ -124,6 +125,8 @@
 								<td>${employee.firstName}</td>
 								<td>${employee.lastName}</td>
 								<td>${employee.emailId}</td>
+								<td>${employee.phoneno}</td>
+
 								<td><a href="/index/employees/${employee.id}"
 									class="btn btn-info">View</a> <a
 									href="/index/employees/edit/${employee.id}"
@@ -152,6 +155,10 @@
 					<div class="form-group">
 						<label for="emailId">Email:</label> <input type="email"
 							class="form-control" id="emailId" name="emailId" required>
+					</div>
+					<div class="form-group">
+						<label for="phoneno">Phone No:</label> <input type="tel"
+							class="form-control" id="phoneno" name="phoneno" required>
 					</div>
 					<button type="submit" class="btn btn-success">Add Employee</button>
 				</form>

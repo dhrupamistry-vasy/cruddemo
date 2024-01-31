@@ -23,7 +23,7 @@ public class EmployeeServiceImpL implements EmployeeService {
 
 	@Override
 	public Employee getEmployee() {
-		Employee employee = new Employee(1, "Dhrupa", "Mistry", "dmistry512@gmail.com");
+		Employee employee = new Employee(1, "Dhrupa", "Mistry", "dmistry512@gmail.com","1234567890");
 		employeeRepository.save(employee);
 		return employee;
 	}
