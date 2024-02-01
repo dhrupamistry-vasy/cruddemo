@@ -10,9 +10,10 @@ body {
 	font-family: Arial, sans-serif;
 	background-color: #f8f9fa;
 	margin: 50px;
-	  background-image: url('https://e0.pxfuel.com/wallpapers/1017/254/desktop-wallpaper-what-makes-a-human-resource-management-system-unique-human-resources.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+	background-image:
+		url('https://e0.pxfuel.com/wallpapers/1017/254/desktop-wallpaper-what-makes-a-human-resource-management-system-unique-human-resources.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .container {

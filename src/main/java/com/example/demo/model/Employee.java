@@ -88,4 +88,17 @@ public class Employee {
 		super();
 	}
 
+	
+
+	public Employee orElseThrow(Object object) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getfirstName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }

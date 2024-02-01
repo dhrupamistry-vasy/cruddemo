@@ -35,7 +35,7 @@ public class EmployeeServiceImpL implements EmployeeService {
 
 
     @Override
-    public Employee updateEmployee(Long id, Employee updatedEmployee) {
+    public Employee updateEmployee(Employee updatedEmployee, Long id) {
         java.util.Optional<Employee> optionalEmployee = employeeRepository.findById(id);
 
         if (optionalEmployee.isPresent()) {
@@ -55,15 +55,17 @@ public class EmployeeServiceImpL implements EmployeeService {
         employeeRepository.deleteById(id);
     }
 
-	@Override
-	public void addEmployee() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public Employee getEmployeeById(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return employeeRepository.findById(id).get();
+	}
+
+	@Override
+	public void addEmployee() {
+		// TODO Auto-generated method stub
+		
 	}
 }
